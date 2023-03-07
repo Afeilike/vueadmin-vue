@@ -11,8 +11,11 @@ import "element-ui/lib/theme-chalk/index.css"
 import store from './store'
 
 
-import axios from 'axios'//全局使用
-Vue.prototype.$axios = axios
+/*import axios from 'axios'//全局使用
+Vue.prototype.$axios = axios*/
+
+import request from './axios'    //axios 的具体实例
+Vue.prototype.$axios = request
 
 //导入mock.js
 require("./mock.js")

@@ -27,8 +27,11 @@ return Result;
 
 
 Mock.mock(RegExp('/login*'),
-  'post', (config) => {
+  'post', () => {
   // 这里无法在header添加authorization，直接跳过
+    // Result.code= 200;
+  //Result.msg= '验证码错误'
+
  console.log("mock----------------login")
  return Result
 })
