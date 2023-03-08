@@ -13,12 +13,23 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+      children:[
+        {
+          path: '/index',
+          name: 'Index',
+          meta:{
+            title:"首页"
+          },
+          component: () => import('../views/Index.vue')
+        }
+
+      ]
     },
     {
       path: '/login',
       name: 'Login',
-      component: ()=> import('../views/Login.vue')
+      component: ()=> import('../views/Login.vue')     //懒加载
     },
     {
       path: '/index',
