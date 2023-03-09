@@ -22,6 +22,10 @@ export default new Router({
             title:"首页"
           },
           component: () => import('../views/Index.vue')
+        },
+        {
+        path:''
+
         }
 
       ]
