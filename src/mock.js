@@ -35,3 +35,18 @@ Mock.mock(RegExp('/login*'),
  console.log("mock----------------login")
  return Result
 })
+
+Mock.mock('/sys/UserInfo', 'get', () => {
+
+  Result.data = {
+    id: "1",
+    username: "test",
+    avatar: "https://image-1300566513.cos.ap-guangzhou.myqcloud.com/upload/images/5a9f48118166308daba8b6da7e466aab.jpg"
+  }
+
+  return Result
+})
+Mock.mock('/logout', 'post', () => {
+
+  return Result
+})
